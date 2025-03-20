@@ -1,39 +1,24 @@
 const projects = [
   {
-    title: "Project 1",
-    link: "#",
-    image: "images/docloc.png",
+    title: "Enterprise Application",
+    link: "https://www.figma.com/design/KxbLjmqhVe8RUsXW3k5b9O/Untitled?node-id=0-1&p=f&t=f1cT5DAjZOoPNJFW-0",
+    image: "images/work1.png",
   },
   {
-    title: "Project 2",
-    link: "#",
-    image: "images/docloc.png",
+    title: "Food Delivery App",
+    link: "https://www.figma.com/design/KxbLjmqhVe8RUsXW3k5b9O/Untitled?node-id=0-1&p=f&t=f1cT5DAjZOoPNJFW-0",
+    image: "images/work2.png",
   },
   {
-    title: "Project 3",
-    link: "#",
-    image: "images/docloc.png",
-  },
-  {
-    title: "Project 4",
-    link: "#",
-    image: "images/docloc.png",
-  },
-  {
-    title: "Project 5",
-    link: "#",
-    image: "images/docloc.png",
-  },
-  {
-    title: "Project 6",
-    link: "#",
-    image: "images/docloc.png",
+    title: "Docloc",
+    link: "https://www.figma.com/design/KxbLjmqhVe8RUsXW3k5b9O/Untitled?node-id=0-1&p=f&t=f1cT5DAjZOoPNJFW-0",
+    image: "images/work3.png",
   },
 ];
 
 function Works() {
   return (
-    <div id="works" className="min-h-screen">
+    <div id="works" className="min-h-screen flex flex-col justify-center">
       <h2 className="text-2xl md:text-4xl font-semibold text-center mb-6 md:mb-12">
         Works
       </h2>

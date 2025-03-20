@@ -19,6 +19,11 @@ const socialMedia = [
     src: "/images/mail.svg",
     alt: "Email",
   },
+  {
+    href: "https://wa.me/message/UX34ZWMQGNURE1",
+    src: "/images/whatsapp.svg",
+    alt: "Whatsapp",
+  },
 ];
 
 const navLinks = [

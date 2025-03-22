@@ -1,6 +1,10 @@
+"use client";
+import Image from "next/image";
 import Form from "./Form";
+import { useState } from "react";
 
 function Contacts() {
+  const [loadImg, setLoadImg] = useState(() => true);
   return (
     <div
       id="contacts"
@@ -11,10 +15,19 @@ function Contacts() {
       </h2>
       <div className="w-11/12 md:w-3/4 h-auto grid grid-cols-1 md:grid-cols-2 items-center rounded-2xl shadow-2xl overflow-hidden">
         <div>
-          <img
+          {loadImg && (
+            <div className="w-full h-full bg-gray-300 animate-pulse"></div>
+          )}
+          <Image
             src="/images/shiksha.avif"
             alt="Shiksha Rupayan Paikar"
-            property="image"
+            width={0}
+            height={0}
+            sizes="100vw"
+            priority={true}
+            quality={100}
+            hidden={loadImg}
+            onLoad={() => setLoadImg(false)}
             className="w-full h-full object-cover"
           />
         </div>

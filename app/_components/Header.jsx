@@ -1,3 +1,6 @@
+import Image from "next/image";
+import Link from "next/link";
+
 const socialMedia = [
   {
     href: "https://www.facebook.com/share/15vvRHN5Xy/",
@@ -47,7 +50,7 @@ function Header() {
       <div className="flex flex-nowrap gap-6">
         {socialMedia.map((social, index) => {
           return index == 3 ? (
-            <a
+            <Link
               key={index}
               href={`mailto:${social.href}?subject=${encodeURIComponent(
                 "Inquiry from Your Portfolio Website"
@@ -57,29 +60,33 @@ function Header() {
               aria-label="Email"
               className="hover:rotate-y-360 transition-transform duration-700 ease-in-out"
             >
-              <img
+              <Image
                 src={social.src}
                 alt={social.alt}
-                className="w-[30px] h-[30px]"
+                height={30}
+                width={30}
+                className="object-cover"
                 aria-hidden="true"
               />
-            </a>
+            </Link>
           ) : (
-            <a
+            <Link
               key={index}
               href={social.href}
               target="_blank"
               rel="noreferrer"
-              aria-label="Social Media"
+              aria-label={social.alt}
               className="hover:rotate-y-360 transition-transform duration-700 ease-in-out"
             >
-              <img
+              <Image
                 src={social.src}
                 alt={social.alt}
-                className="w-[30px] h-[30px]"
+                height={30}
+                width={30}
+                className="object-cover"
                 aria-hidden="true"
               />
-            </a>
+            </Link>
           );
         })}
       </div>
@@ -91,9 +98,9 @@ function Header() {
                 key={index}
                 className="py-1 px-3 md:px-6 border-2 border-black rounded-4xl hover:bg-black hover:text-white transition-colors duration-700 ease-in-out"
               >
-                <a href={link.href} aria-label={link.text}>
+                <Link href={link.href} aria-label={link.text}>
                   {link.text}
-                </a>
+                </Link>
               </li>
             );
           })}
